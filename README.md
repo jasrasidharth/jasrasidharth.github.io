@@ -1,6 +1,6 @@
 # Sid Jasra — Personal Resume Website
 
-Live at: [sidjasra.github.io](https://sidjasra.github.io)
+Live at: [jasrasidharth.github.io](https://jasrasidharth.github.io)
 
 ## About
 Personal resume website built with plain HTML, CSS, and JavaScript. No frameworks, no dependencies — just clean, fast, mobile-friendly code.
