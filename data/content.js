@@ -8,7 +8,7 @@ const resumeData = {
     phone: "604.802.5074",
     location: "Vancouver, BC",
     linkedin: "https://www.linkedin.com/in/sidharthjasra/",
-    github: "https://github.com/sidjasra"
+    github: "https://github.com/jasrasidharth"
   },
 
   summary: "Visionary Data & Engineering Leader with 14+ years driving enterprise data strategy, team building, and organizational transformation. Proven track record leading cross-functional engineering teams through IPOs, $12B mergers, and cloud-scale platform migrations. Expertise in people leadership, stakeholder alignment, and translating technical data capabilities into measurable business outcomes. Adept at recruiting and growing high-performing teams, fostering a culture of accountability and innovation, and partnering with C-suite and Legal to govern risk at scale.",
