@@ -7,7 +7,7 @@ const resumeData = {
     email: "jasrasidharth@gmail.com",
     phone: "604.802.5074",
     location: "Vancouver, BC",
-    linkedin: "https://www.linkedin.com/in/sidjasra/",
+    linkedin: "https://www.linkedin.com/in/sidharthjasra/",
     github: "https://github.com/sidjasra"
   },
 
