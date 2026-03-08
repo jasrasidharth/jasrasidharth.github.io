@@ -1,31 +1,44 @@
-@import url('https://fonts.googleapis.com/css2?family=Source+Serif+4:opsz,wght@8..60,300;8..60,400;8..60,600&family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500;9..40,600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,600;0,700;1,400&family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500;9..40,600&display=swap');
 
 :root {
-  --sand: #dce8f5;
-  --sand-dark: #ccd8e8;
-  --cream: #f4f8fd;
-  --terra: #3a6ea8;
-  --terra-light: #5a8ec8;
-  --terra-pale: #e8f0fa;
-  --ink: #1a2e45;
+  --navy: #0f1e35;
+  --navy-mid: #162840;
+  --navy-light: #1e3555;
+  --gold: #c9a84c;
+  --gold-light: #e0c070;
+  --gold-pale: #f5f0e0;
+  --cream: #fafbff;
+  --ink: #0f1e35;
   --muted: #4a6a8a;
-  --border: #c8ddf0;
+  --border: #c8d8f0;
+  --accent: #3a6ea8;
 }
 
 * { margin: 0; padding: 0; box-sizing: border-box; }
 
 body {
   font-family: 'DM Sans', sans-serif;
-  background: var(--sand-dark);
+  background: #e8edf5;
+  background-image:
+    radial-gradient(ellipse at 20% 20%, rgba(58,110,168,0.12) 0%, transparent 55%),
+    radial-gradient(ellipse at 80% 80%, rgba(201,168,76,0.08) 0%, transparent 50%),
+    linear-gradient(160deg, #dde6f2 0%, #e8edf5 50%, #dfe8f0 100%);
   color: var(--ink);
   line-height: 1.6;
+  min-height: 100vh;
 }
 
 /* ── Header ── */
 .header {
-  background: var(--sand);
-  border-bottom: 3px solid var(--terra);
-  padding: 52px 0 40px;
+  background: var(--navy);
+  background-image:
+    repeating-linear-gradient(
+      135deg, transparent, transparent 20px,
+      rgba(255,255,255,0.018) 20px, rgba(255,255,255,0.018) 21px
+    ),
+    radial-gradient(ellipse at 80% 50%, rgba(201,168,76,0.12) 0%, transparent 60%),
+    radial-gradient(ellipse at 10% 80%, rgba(58,110,168,0.2) 0%, transparent 50%);
+  padding: 56px 0 44px;
   position: relative;
   overflow: hidden;
 }
@@ -33,19 +46,19 @@ body {
 .header::before {
   content: '';
   position: absolute;
-  top: -80px; right: -80px;
+  top: -60px; right: -60px;
   width: 300px; height: 300px;
   border-radius: 50%;
-  background: rgba(201,98,42,0.06);
+  background: rgba(201,168,76,0.06);
 }
 
 .header::after {
   content: '';
   position: absolute;
-  bottom: -50px; left: 25%;
-  width: 200px; height: 200px;
+  bottom: -50px; left: 20%;
+  width: 220px; height: 220px;
   border-radius: 50%;
-  background: rgba(201,98,42,0.04);
+  background: rgba(58,110,168,0.08);
 }
 
 .header-inner {
@@ -57,22 +70,23 @@ body {
 }
 
 .name {
-  font-family: 'Source Serif 4', serif;
-  font-size: 54px;
-  font-weight: 600;
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 58px;
+  font-weight: 700;
   letter-spacing: -1px;
-  line-height: 1.05;
-  color: var(--ink);
-  margin-bottom: 6px;
+  line-height: 1.0;
+  color: #f0e6c8;
+  margin-bottom: 8px;
 }
 
 .title {
   font-size: 11px;
-  font-weight: 500;
-  letter-spacing: 3px;
+  font-weight: 400;
+  letter-spacing: 3.5px;
   text-transform: uppercase;
-  color: var(--terra);
-  margin-bottom: 28px;
+  color: var(--gold);
+  opacity: 0.9;
+  margin-bottom: 30px;
 }
 
 .contact-row {
@@ -87,7 +101,7 @@ body {
   display: flex;
   align-items: center;
   gap: 6px;
-  color: var(--muted);
+  color: #8aa0be;
   white-space: nowrap;
 }
 
@@ -96,8 +110,8 @@ body {
 .contact-divider {
   width: 1px;
   height: 14px;
-  background: var(--terra-light);
-  opacity: 0.35;
+  background: var(--gold);
+  opacity: 0.25;
   margin: 0 4px;
   flex-shrink: 0;
 }
@@ -114,16 +128,16 @@ body {
   justify-content: center;
   width: 32px; height: 32px;
   border-radius: 50%;
-  background: rgba(201,98,42,0.1);
-  border: 1px solid rgba(201,98,42,0.25);
-  color: var(--terra);
+  background: rgba(201,168,76,0.1);
+  border: 1px solid rgba(201,168,76,0.25);
+  color: var(--gold);
   text-decoration: none;
   transition: background 0.2s, transform 0.15s;
   flex-shrink: 0;
 }
 
 .contact-icon-btn:hover {
-  background: rgba(201,98,42,0.2);
+  background: rgba(201,168,76,0.22);
   transform: translateY(-1px);
 }
 
@@ -163,7 +177,7 @@ body {
   font-weight: 600;
   letter-spacing: 3px;
   text-transform: uppercase;
-  color: var(--terra);
+  color: var(--accent);
   margin-bottom: 16px;
   display: flex;
   align-items: center;
@@ -179,33 +193,32 @@ body {
 
 /* ── Summary ── */
 .summary-block {
-  font-family: 'Source Serif 4', serif;
-  font-size: 14.5px;
-  font-weight: 300;
-  line-height: 1.8;
-  color: var(--muted);
-  padding: 16px 20px;
-  border-left: 3px solid var(--terra);
-  background: var(--terra-pale);
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 16px;
+  font-weight: 400;
+  font-style: italic;
+  line-height: 1.85;
+  color: #2a3a52;
+  padding: 18px 22px;
+  border-left: 3px solid var(--gold);
+  background: var(--cream);
+  background-image: radial-gradient(circle at 100% 0%, #e8eef8 0%, transparent 60%);
   border-radius: 0 8px 8px 0;
+  box-shadow: 0 2px 12px rgba(15,30,53,0.06);
 }
 
-/* ── Cert tags in header area ── */
-.cert-header-row {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 7px;
-  margin-bottom: 44px;
-}
+/* ── Certifications ── */
+.cert-list { display: flex; flex-wrap: wrap; gap: 8px; }
 
-.cert-header-tag {
-  background: white;
+.cert-tag {
+  background: var(--cream);
   border: 1px solid var(--border);
-  border-radius: 20px;
-  padding: 4px 12px;
-  font-size: 11.5px;
-  color: var(--terra);
+  border-radius: 4px;
+  padding: 5px 13px;
+  font-size: 12px;
+  color: var(--accent);
   font-weight: 500;
+  box-shadow: 0 1px 4px rgba(15,30,53,0.06);
 }
 
 /* ── Competencies ── */
@@ -217,16 +230,19 @@ body {
 
 .competency-card {
   background: var(--cream);
+  background-image: radial-gradient(circle at 100% 0%, #edf2fc 0%, transparent 70%);
   border: 1px solid var(--border);
   border-radius: 8px;
-  padding: 12px 16px;
+  padding: 13px 16px;
+  box-shadow: 0 2px 8px rgba(15,30,53,0.05);
 }
 
 .competency-label {
   font-size: 11.5px;
   font-weight: 600;
-  color: var(--terra);
+  color: var(--navy);
   margin-bottom: 3px;
+  letter-spacing: 0.2px;
 }
 
 .competency-value {
@@ -236,7 +252,7 @@ body {
 }
 
 /* ── Experience ── */
-.job { margin-bottom: 28px; }
+.job { margin-bottom: 30px; }
 
 .job-header {
   display: flex;
@@ -252,16 +268,16 @@ body {
 .job-title-line { display: flex; align-items: baseline; gap: 8px; flex-wrap: wrap; }
 
 .job-title {
-  font-family: 'Source Serif 4', serif;
-  font-size: 16.5px;
-  font-weight: 600;
-  color: var(--ink);
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 18px;
+  font-weight: 700;
+  color: var(--navy);
 }
 
 .job-company {
   font-size: 13px;
   font-weight: 400;
-  color: var(--terra);
+  color: var(--gold);
   font-style: italic;
 }
 
@@ -274,14 +290,14 @@ body {
   line-height: 1.65;
   padding-left: 16px;
   position: relative;
-  color: #4a3828;
+  color: #2a3a52;
 }
 
 .job-bullets li::before {
   content: '▸';
   position: absolute;
   left: 0;
-  color: #e0a882;
+  color: #a0b8d8;
   font-size: 10px;
   top: 4px;
 }
@@ -298,11 +314,12 @@ body {
   background: var(--cream);
   border: 1px solid var(--border);
   border-radius: 6px;
+  box-shadow: 0 1px 4px rgba(15,30,53,0.05);
 }
 
 .skill-label {
   font-weight: 600;
-  color: var(--terra);
+  color: var(--navy);
   min-width: 160px;
   flex-shrink: 0;
   font-size: 12px;
@@ -310,19 +327,6 @@ body {
 }
 
 .skill-value { color: var(--muted); }
-
-/* ── Certifications ── */
-.cert-list { display: flex; flex-wrap: wrap; gap: 8px; }
-
-.cert-tag {
-  background: var(--cream);
-  border: 1px solid var(--border);
-  border-radius: 20px;
-  padding: 5px 13px;
-  font-size: 12px;
-  color: var(--muted);
-  font-weight: 500;
-}
 
 /* ── Education ── */
 .edu-item {
@@ -332,9 +336,16 @@ body {
 }
 
 .edu-item:last-child { border-bottom: none; }
-.edu-degree { font-family: 'Source Serif 4', serif; font-weight: 600; color: var(--ink); }
+
+.edu-degree {
+  font-family: 'Cormorant Garamond', serif;
+  font-size: 16px;
+  font-weight: 700;
+  color: var(--navy);
+}
+
 .edu-school { color: var(--muted); font-size: 12.5px; margin-top: 2px; }
-.edu-detail { color: var(--terra); font-size: 11.5px; margin-top: 2px; font-style: italic; }
+.edu-detail { color: var(--gold); font-size: 11.5px; margin-top: 2px; font-style: italic; }
 
 /* ── Footer ── */
 .footer {
@@ -351,7 +362,7 @@ body {
 @media (max-width: 640px) {
   .header { padding: 36px 0 28px; }
   .header-inner { padding: 0 20px; }
-  .name { font-size: 36px; }
+  .name { font-size: 38px; }
   .title { font-size: 10px; letter-spacing: 2px; margin-bottom: 18px; }
 
   .contact-row { flex-direction: column; align-items: flex-start; gap: 10px; }
