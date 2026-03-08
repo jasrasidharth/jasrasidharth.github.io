@@ -1,15 +1,15 @@
 @import url('https://fonts.googleapis.com/css2?family=Source+Serif+4:opsz,wght@8..60,300;8..60,400;8..60,600&family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500;9..40,600&display=swap');
 
 :root {
-  --sand: #f5ede0;
-  --sand-dark: #ede0cc;
-  --cream: #fffcf8;
-  --terra: #c9622a;
-  --terra-light: #e07a42;
-  --terra-pale: #f9ede4;
-  --ink: #2a1f14;
-  --muted: #7a6655;
-  --border: #e8d8c8;
+  --sand: #dce8f5;
+  --sand-dark: #ccd8e8;
+  --cream: #f4f8fd;
+  --terra: #3a6ea8;
+  --terra-light: #5a8ec8;
+  --terra-pale: #e8f0fa;
+  --ink: #1a2e45;
+  --muted: #4a6a8a;
+  --border: #c8ddf0;
 }
 
 * { margin: 0; padding: 0; box-sizing: border-box; }
